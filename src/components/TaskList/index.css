@@ -1,0 +1,63 @@
+
+.todos-bg-container {
+    /* background-color: #f9fbfe; */
+    min-height: 100vh;
+    padding-left: 40px;
+    padding-top: 50px;
+    background-color: #b6c5ff;
+}
+.bgs{
+    max-width: 1120px;
+    margin: auto;
+}
+
+.todos-heading {
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 46px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+
+}
+
+.create-task-heading {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.create-task-heading-subpart {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.todo-items-heading {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.todo-items-heading-subpart {
+    font-family: "Roboto";
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.todo-items-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.todo-bg-image{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+.todo-top-container{
+    display: flex;
+    
+}
