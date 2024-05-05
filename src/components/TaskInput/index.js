@@ -1,34 +1,51 @@
-import { useState } from "react"
+import { useState } from "react";
 
-import "./index.css"
+import "./index.css";
 
 const TaskInput = (props) => {
-    const [inputValue, setInputValue] = useState('')
+    // State to manage the value of the input field
+    const [inputValue, setInputValue] = useState('');
 
-    const {addTodo} = props
+    // Destructure addTodo function from props
+    const { addTodo } = props;
 
-    const onChangeTodo = (event) =>{
-        setInputValue(event.target.value)
+    // Function to handle input field change
+    const onChangeTodo = (event) => {
+        setInputValue(event.target.value);
     }
 
-    const onAddTodoButon = (event) => {
+    // Function to handle adding a new todo item
+    const onAddTodoButton = (event) => {
         event.preventDefault();
 
-        if(inputValue === ''){
-           return  alert("Please Enter a Task Name")
+        // Check if input value is empty
+        if (inputValue === '') {
+            // Display alert if input value is empty
+            return alert("Please Enter a Task Name");
         }
 
-        addTodo(inputValue)
+        // Call addTodo function with input value
+        addTodo(inputValue);
         
-        setInputValue('')
+        // Reset input value after adding todo
+        setInputValue('');
     }
 
-    return(
-        <form onSubmit={onAddTodoButon}>
-            <input value={inputValue} type="text" id="todoUserInput" className="todo-user-input" placeholder="What needs to be done?" onChange={onChangeTodo} />
+    // Render the input field and add button inside a form
+    return (
+        <form onSubmit={onAddTodoButton}>
+         
+            <input 
+                value={inputValue} 
+                type="text" 
+                id="todoUserInput" 
+                className="todo-user-input" 
+                placeholder="What needs to be done?" 
+                onChange={onChangeTodo} 
+            />
             <button type="submit" className="add-todo-button">Add</button>
         </form>
-    )
-       
+    );
 }
-export default TaskInput
+
+export default TaskInput;
